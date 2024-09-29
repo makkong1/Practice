@@ -1,7 +1,6 @@
 package hello.hellespring.repository;
 
 import hello.hellespring.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 /**
@@ -20,7 +19,7 @@ public class MemoryMemberRepository implements MemberRepository{
     }
 
     @Override
-    public Optional<Member> findById(long id) {
+    public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));
     }
 
