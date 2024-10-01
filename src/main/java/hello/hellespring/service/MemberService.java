@@ -12,6 +12,7 @@ import java.util.Optional;
 @Service
 @Transactional
 public class MemberService {
+
     private final MemberRepository memberRepository;
 
 //    외부에서 주입한다.

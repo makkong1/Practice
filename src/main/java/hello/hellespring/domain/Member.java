@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 @Entity
 public class Member {
     @Id
+    // @GeneratedValue PK라고 생각하기
+    // IDENTITY 기본키 생성을 db에 위임
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;

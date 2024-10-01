@@ -1,5 +1,6 @@
 package hello.hellespring.controller;
 
+import hello.hellespring.MyComponent;
 import hello.hellespring.domain.Member;
 import hello.hellespring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +16,19 @@ public class MemberController {
 
     private final MemberService memberService;
 
+    //private final MyComponent myComponent;
+
     @Autowired
-    public MemberController(MemberService memberService) {
+    public MemberController(MemberService memberService, MyComponent myComponent) {
         this.memberService = memberService;
+        //this.myComponent = myComponent;
     }
+
+//    @GetMapping("/beans")
+//    public String showBeans() {
+//        myComponent.displayBeanNames();  // 여기서 메서드를 호출
+//        return "빈 목록 출력 완료!";
+//    }
 
     @GetMapping(value= "members/new")
     public String createForm() {
